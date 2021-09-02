@@ -14,10 +14,14 @@ code {
 
 .card {
   background-color: white;
-  border: yellow 1px solid;
+  border: yellow 5px solid;
   color: black;
   min-width: 250px;
   margin: 10px;
+}
+
+.card.selected {
+  border: green 5px solid;
 }
 
 .flex-container {

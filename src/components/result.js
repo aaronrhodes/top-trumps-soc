@@ -9,10 +9,12 @@ export function Results({ firstCard, secondCard, attribute }) {
             ? firstCard : secondCard;
     }
 
-    return <div>
-        {winningCard ?
-            <Card card={winningCard}></Card>
-            : "Please select two cards"
-        }
-    </div>
+    return winningCard ?
+        <div>
+            <h2>Winner!</h2>
+            <p>Comparing: {attribute}</p>
+            <p>Loser: {winningCard === firstCard ? secondCard.name : firstCard.name}</p>
+            <Card isSelected={true} card={winningCard}></Card>
+        </div>
+        : <div>Please select two cards</div>;
 }

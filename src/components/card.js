@@ -1,10 +1,10 @@
 import React from 'react';
 
-export function Card({ card, cardSelected }) {
+export function Card({ card, cardSelected, isSelected }) {
 
     const attributes = Object.keys(card.attributes);
 
-    return <div className="card">
+    return <div className={`card${isSelected ? ' selected' : ''}`}>
         <image src={card.imageUrl} />
         <h4>{card.name}</h4>
         <p>{card.description}</p>
